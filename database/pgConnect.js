@@ -1,11 +1,10 @@
-const { Client } = require('pg');
+const { Pool } = require('pg');
 
-const client = new Client({
-  connectionString: process.env.DATABASE_URL,
-  ssl: process.env.DATABASE_URL ? true : false
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL || 'postgresql://postgres:7188@localhost:5432/listings',
+  ssl: !!process.env.DATABASE_URL,
 });
-client.connect();
 // eslint-disable-next-line no-console
 console.log('=============== Connected to PostgreSQL ===============');
 
-module.exports = client;
+module.exports = pool;
