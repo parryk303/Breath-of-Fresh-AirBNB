@@ -1,2 +1,2 @@
 web: webpack -d --watch
-web: node server/index.js
+web: node Listings/server/index.js
