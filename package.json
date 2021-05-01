@@ -4,7 +4,7 @@
   "description": "Service for the listing details in our FEC for team Breath of Fresh AirBNB",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server/index.js",
+    "start": "nodemon Listings/server/index.js",
     "dev:react": "webpack -d --watch",
     "test": "jest --collectCoverage"
   },
