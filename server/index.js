@@ -14,7 +14,8 @@ app.use(express.static(path.join(__dirname, '/../client/dist')));
 app.get('/listings', (req, res) => {
   pool.query('SELECT * FROM listings', (err, results) => {
     if (err) {
-      res.sendStatus(500);
+      console.log(err);
+      res.sendStatus(400);
     } else {
       res.status(200).send(results.rows);
     }
@@ -23,7 +24,7 @@ app.get('/listings', (req, res) => {
 
 app.get('/listings/:home', (req, res) => {
   const home = { home: Number(req.params.home) };
-  pool.getListing(home, (err, results) => {
+  pool.query(`SELECT * FROM listings WHERE home =${home}`, (err, results) => {
     if (err) {
       res.send(err);
     } else {
@@ -32,16 +33,16 @@ app.get('/listings/:home', (req, res) => {
   });
 });
 
-app.delete('/listings/:home', (req, res) => {
-  const home = { home: Number(req.params.home) };
-  pool.deleteListing(home, (err, results) => {
-    if (err) {
-      res.send(err);
-    } else {
-      res.status(200).send(results);
-    }
-  });
-});
+// app.delete('/listings/:home', (req, res) => {
+//   const home = { home: Number(req.params.home) };
+//   pool.deleteListing(home, (err, results) => {
+//     if (err) {
+//       res.send(err);
+//     } else {
+//       res.status(200).send(results);
+//     }
+//   });
+// });
 
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console

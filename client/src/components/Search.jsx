@@ -29,5 +29,4 @@ const Search = ({ searchHandler }) => (
     </div>
   </nav>
 );
-
 export default Search;

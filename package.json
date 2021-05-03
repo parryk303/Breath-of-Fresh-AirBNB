@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server/index.js",
-    "dev:react": "webpack -d --watch",
-    "test": "jest --collectCoverage"
+    "build": "webpack -d --watch"
   },
   "repository": {
     "type": "git",
