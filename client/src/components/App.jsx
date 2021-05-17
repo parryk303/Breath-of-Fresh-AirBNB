@@ -80,7 +80,8 @@ class App extends React.Component {
 
   // get data from db
   getAll() {
-    axios.get('http://18.218.35.139:3001/listings')
+    // axios.get('http://18.218.35.139:3000/listings')
+    axios.get('/listings')
       .then(({ data }) => {
         this.setState(
           { listings: data },
