@@ -1,12 +1,13 @@
 {
-  "name": "listing-details",
+  "name": "breath-of-fresh-airbnb",
   "version": "1.0.0",
   "description": "Service for the listing details in our FEC for team Breath of Fresh AirBNB",
   "main": "index.js",
   "scripts": {
     "start": "nodemon server/index.js",
     "seed": "node database/seed.js",
-    "build": "webpack -d --watch"
+    "build": "webpack -d --watch",
+    "test": "jest --collectCoverage"
   },
   "repository": {
     "type": "git",
