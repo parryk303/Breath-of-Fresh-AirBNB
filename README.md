@@ -51,3 +51,5 @@ npm i
 ``
 ``
 docker compose up
+
+go to http://localhost:3001/#/homes/1 to start your search

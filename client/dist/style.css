@@ -183,6 +183,7 @@ body {
   display: inline;
   font-family: 'Cereal Book';
   grid-column: 3;
+  border-color: transparent;
 }
 
 #share:hover {
@@ -192,6 +193,7 @@ body {
 #share {
   margin-right: 5px;
   border-color: transparent;
+  background-color: transparent;
   color: black;
 }
 
@@ -201,6 +203,7 @@ body {
 
 #save {
   border-color: transparent;
+  background-color: transparent;
   color: black;
 }
 

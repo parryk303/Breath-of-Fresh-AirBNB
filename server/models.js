@@ -1,4 +1,5 @@
 /* eslint-disable */
+
 const Listing = require('../database/Listing');
 
 const cb = (err, results) => {
