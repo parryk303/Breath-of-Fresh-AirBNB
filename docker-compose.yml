@@ -2,7 +2,7 @@ version: '3'
 
 services:
   survey:
-    image: parryk303/listing-details:latest
+    image: parryk303/breath-of-fresh-airbnb:latest
     depends_on:
       - 'database'
     ports:
